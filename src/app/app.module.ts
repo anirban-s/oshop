@@ -28,6 +28,8 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from './products/product-card/product-card.component';
 
 // import * as firebase from 'firebase/app';
 // firebase.initializeApp(environment.firebase);
@@ -44,7 +46,9 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFilterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: ProductsComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'login', component: LoginComponent },
