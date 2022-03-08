@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let productId of productIds">
-                <td><img [src]="cart.items[productId].product.imageUrl" class="thumbnail" alt="" /></td>
+                <td><div [style.backgroundImage]="'url(' + cart.items[productId].product.imageUrl +')'" class="thumbnail" ></div></td>
                 <td>{{ cart.items[productId].product.title }}</td>
                 <td>
                     <product-quantity [product]="cart.items[productId].product" [shopping-cart]="cart"></product-quantity>
