@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckOutComponent } from './check-out.component';
 
@@ -6,12 +6,12 @@ describe('CheckOutComponent', () => {
   let component: CheckOutComponent;
   let fixture: ComponentFixture<CheckOutComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
       declarations: [ CheckOutComponent ]
     })
     .compileComponents();
-  });
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CheckOutComponent);
@@ -19,7 +19,7 @@ describe('CheckOutComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });
